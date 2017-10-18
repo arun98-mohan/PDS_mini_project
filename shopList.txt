@@ -3,9 +3,19 @@ sugar
 1500
 rice
 200
-ramapuram
+guindy
 sugar
 300
 rice
 500
+meenambakkam
+sugar
+200
+rice
+450
+alandur
+sugar
+300
+rice
+400
 
