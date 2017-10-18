@@ -22,15 +22,15 @@ functionalities
 ### ShopList.txt
 Format of Data
 
-<shopname>
-<sugar> /*written as it as without <>*/
-<quantity>
-<rice> /*written as it as without <>*/
-<quantity>
+*shopname>
+*sugar> /*written as it as without *> */
+*quantity>
+*rice> /*written as it as without *> */
+*quantity>
 
 ### UserDatabase.txt
 Format of Data
 
-<username>
-<corresponding_shop>
-<purchased or not> /* no-> not purchased "PURCHASED"->purchased */
+*username>
+*corresponding_shop>
+*purchased or not> /* no-> not purchased "PURCHASED"->purchased */
