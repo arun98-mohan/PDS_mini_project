@@ -145,6 +145,8 @@ class Purchase
 				geek.str(t2);
 				geek>>riceT;
 				// cout<<"\nInside While Loop";
+                if(placeT!="")
+                {
 				if(place!=placeT)
 				{
 					ofile<<placeT<<"\n"<<sT<<"\n"<<sugarT<<"\n"<<rT<<"\n"<<riceT<<endl;
@@ -155,6 +157,7 @@ class Purchase
 					ofile<<placeT<<"\n"<<sT<<"\n"<<sugarT-sugar<<"\n"<<rT<<"\n"<<riceT-rice<<endl;
 					//cout<<"PLACE FOUND"<<endl;
 				}
+                }
 
 			}
 			myfile.close();

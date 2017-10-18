@@ -1,8 +1,8 @@
 adyar
 sugar
-1500
+1497
 rice
-200
+199
 guindy
 sugar
 300
@@ -10,9 +10,9 @@ rice
 500
 meenambakkam
 sugar
-193
+187
 rice
-444
+440
 alandur
 sugar
 300
