@@ -18,8 +18,3 @@ sugar
 300
 rice
 400
-
-sugar
-300
-rice
-400
