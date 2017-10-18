@@ -3,7 +3,7 @@ adyar
 no
 user3
 meenambakkam
-no
+PURCHASED
 user4
 guindy
 no
