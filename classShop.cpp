@@ -6,12 +6,13 @@ using namespace std;
 int main()
 {
 	ifstream myfile;
-	string sname,item;
-	int quantity;
+	ofstream ofile("test.txt");
+	string sname;
+	//	int quantity;
 	myfile.open("shopList.txt");
 	int i=0;
-	do
-	{
+	/*	do
+		{
 		myfile>>sname;
 		cout<<sname<<endl;
 		myfile>>item;
@@ -22,8 +23,20 @@ int main()
 		cout<<item<<endl;
 		myfile>>quantity;
 		cout<<quantity<<endl;
-	}while(!myfile.eof());
+		}while(!myfile.eof());*/
+	while(!myfile.eof())		//Updating a record in a text file
+	{
+		getline(myfile,sname);
+		if(sname=="guindy")
+		{
+			ofile<<"ramapuram"<<endl;
+		}
+		else ofile<<sname<<endl;	
+	}
 	myfile.close();
+	ofile.close();
+	remove("shopList.txt");
+	rename("test.txt","shopList.txt");
 	return 0;
 }
 
