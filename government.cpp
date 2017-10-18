@@ -4,10 +4,10 @@
 using namespace std;
 
 /* Government will
-   d   1) add / remove users
-   2) add stocks to ration shop
-   d  3) revoke all users to "not purchased" status
-   4) display all ration shops with details
+   d 1) add / remove users
+     2) add stocks to ration shop
+   d 3) revoke all users to "not purchased" status
+   d 4) display all ration shops with details
    d 5) display all users with details
  */
 
@@ -104,4 +104,26 @@ class government
 					cout<<"\nName: "<<name<<"\tPlace: "<<place<<"\tStatus: "<<pur<<endl;
 			}
 		}
+    void displayShops() //Function to display details of all ration shops
+    {
+        string name,item1,item2,quantity1,quantity2;
+        ifstream myfile;
+        myfile.open("shopList.txt");
+        while(!myfile.eof())
+        {
+            myfile>>name>>item1>>quantity1>>item2>>quantity2;
+            if(name!="")
+            {
+                cout<<"\nName: "<<name<<"\nItem: "<<item1<<" "<<quantity1<<"kgs\tItem: "<<item2<<" "<<quantity2<<"kgs"<<endl;
+            }
+        }
+    }
+    
 };
+
+int main()
+{
+    government g;
+    g.displayShops();
+    return 0;
+}

@@ -86,6 +86,11 @@ class Purchase
 			rename("test.txt","userDatabase.txt");
 		}
 
+    void updateShop(string place,int sugar,int price) //Function to update the stock in RationShop
+    {
+        
+    }
+    
 /*Function to be called. -> It calls userVerify -> It calls update function after generating bill */
 
 		void bill() //To Bill the user and update his records
@@ -126,7 +131,15 @@ rice:  cout<<"\nEnter Rice weight purchased: ";
        total=(sugar*10)+(rice*2);
        cout<<"BILL: "<<total<<"INR"<<endl;
        update(name);
+       updateShop(place,sugar,rice);
 			}
 		}
 
 };
+
+int main()
+{
+    Purchase p;
+    p.bill();
+    return 0;
+}
