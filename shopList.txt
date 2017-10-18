@@ -10,12 +10,11 @@ rice
 500
 meenambakkam
 sugar
-200
+198
 rice
-450
+449
 alandur
 sugar
 300
 rice
 400
-

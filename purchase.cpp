@@ -1,6 +1,8 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include<sstream>
+//#include<stdio.h>
 using namespace std;
 
 /*This class will be used to verify user details and update the user record with quantity purchased
@@ -86,9 +88,48 @@ class Purchase
 			rename("test.txt","userDatabase.txt");
 		}
 
-    void updateShop(string place,int sugar,int price) //Function to update the stock in RationShop
+    void updateShop(string place,int sugar,int rice) //Function to update the stock in RationShop
     {
-        
+        string placeT;
+        int sugarT,riceT;
+        string sT,rT,t1,t2;
+        ifstream myfile;
+        myfile.open("shopList.txt");
+        ofstream ofile("test.txt");
+        while(!myfile.eof())
+        {
+            getline(myfile,placeT);
+            getline(myfile,sT);
+            getline(myfile,t1);
+            getline(myfile,rT);
+            getline(myfile,t2);
+            stringstream geek;
+            geek.clear();
+            geek.str("");
+            geek.str(t1);
+            geek>>sugarT;
+            geek.clear();
+            geek.str("");
+            geek.str(t2);
+            geek>>riceT;
+            cout<<"\nInside While Loop";
+           
+                if(place!=placeT)
+                {
+                    ofile<<placeT<<"\n"<<sT<<"\n"<<sugarT<<"\n"<<rT<<"\n"<<riceT<<endl;
+                    cout<<"Places not disturbed"<<endl;
+                }
+                else if(place==placeT)
+                {
+                    ofile<<placeT<<"\n"<<sT<<"\n"<<sugarT-sugar<<"\n"<<rT<<"\n"<<riceT-rice<<endl;
+                    cout<<"PLACE FOUND"<<endl;
+                }
+           
+        }
+        myfile.close();
+        ofile.close();
+        remove("shopList.txt");
+        rename("test.txt","shopList.txt");
     }
     
 /*Function to be called. -> It calls userVerify -> It calls update function after generating bill */
