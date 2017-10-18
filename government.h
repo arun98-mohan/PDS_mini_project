@@ -5,10 +5,9 @@ using namespace std;
 
 /* Government will
    d 1) add / remove users
-     2) add stocks to ration shop
-   d 3) revoke all users to "not purchased" status
-   d 4) display all ration shops with details
-   d 5) display all users with details
+   d 2) revoke all users to "not purchased" status
+   d 3) display all ration shops with details
+   d 4) display all users with details
  */
 
 class government
@@ -65,6 +64,7 @@ class government
 			remove("userDatabase.txt");
 			rename("test.txt","userDatabase.txt");
 		}
+    
 		void removeUser() //Function to remove an user
 		{
 			string name;
@@ -92,7 +92,8 @@ class government
 		}
 		void displayUsers()	//Function to display details of all users
 		{
-			string name,place,pur;
+            cout<<"\n####USER DETAILS####";
+            string name,place,pur;
 			ifstream myfile;
 			myfile.open("userDatabase.txt");
 			while(!myfile.eof())
@@ -104,26 +105,20 @@ class government
 					cout<<"\nName: "<<name<<"\tPlace: "<<place<<"\tStatus: "<<pur<<endl;
 			}
 		}
-    void displayShops() //Function to display details of all ration shops
-    {
-        string name,item1,item2,quantity1,quantity2;
-        ifstream myfile;
-        myfile.open("shopList.txt");
-        while(!myfile.eof())
-        {
-            myfile>>name>>item1>>quantity1>>item2>>quantity2;
-            if(name!="")
-            {
-                cout<<"\nName: "<<name<<"\nItem: "<<item1<<" "<<quantity1<<"kgs\tItem: "<<item2<<" "<<quantity2<<"kgs"<<endl;
-            }
-        }
-    }
-    
-};
+		void displayShops() //Function to display details of all ration shops
+		{
+            cout<<"\n####RATION SHOP DETAILS####";
+            string name,item1,item2,quantity1,quantity2;
+			ifstream myfile;
+			myfile.open("shopList.txt");
+			while(!myfile.eof())
+			{
+				myfile>>name>>item1>>quantity1>>item2>>quantity2;
+				if(name!="")
+				{
+					cout<<"\nName: "<<name<<"\nItem: "<<item1<<" "<<quantity1<<"kgs\tItem: "<<item2<<" "<<quantity2<<"kgs"<<endl;
+				}
+			}
+		}
 
-int main()
-{
-    government g;
-    g.displayShops();
-    return 0;
-}
+};
