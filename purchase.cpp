@@ -57,6 +57,8 @@ class Purchase
 			while(!myfile.eof())
 			{
 				getline(myfile,n);
+				if(n!="")
+{
 				if(n==name)
 				{
 					cout<<"\n####DETAILS UPDATING IN FILE####";
@@ -76,6 +78,7 @@ class Purchase
 					ofile<<place<<endl;
 					ofile<<"no"<<endl;
 				}
+}
 			}
 			myfile.close();
 			ofile.close();

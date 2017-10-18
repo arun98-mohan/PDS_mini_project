@@ -1,9 +1,3 @@
-user1
-alandur
-no
-user2
-guindy
-PURCHASED
 user3
 meenambakkam
 no
